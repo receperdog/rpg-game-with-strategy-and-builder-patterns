@@ -10,6 +10,13 @@ public class Main {
 
         Character playerTwo = new Character.Builder("PlayerTwo", "Female", "USA").build();
 
+        Character abdullah =
+                new Character.Builder("akatsuki", "Male", "TURK").skinColor("white").eyeColor(
+                        "Brown").description("Adamdır").build();
+
+        Character abdullah2 =
+                new Character.Builder("akatsuki", "Male", "TURK").skinColor("white").build();
+
         System.out.println("Weapon information");
         playerOne.setWeaponStrategies(new Bow());
         System.out.println(playerOne.getWeaponStrategies());

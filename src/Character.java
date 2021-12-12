@@ -27,6 +27,7 @@ public class Character {
         this.skinColor = builder.skinColor;
     }
 
+    //skill
     public String getNickName() {
         return nickName;
     }
