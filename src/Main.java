@@ -21,6 +21,12 @@ public class Main {
         System.out.println(playerOne.getArmorStrategies());
         System.out.println(playerOne.getHealthPoint());
 
+        System.out.println("------");
+        System.out.println(playerOne.getHealthPoint());
+        playerOne.setHealthPoint(500);//I Assume player get 500 damage points.
+        System.out.println(playerOne.getHealthPoint());//Player health point will be 500;
+        System.out.println("------");
+
         System.out.println("Character information");
         System.out.println(playerOne.getGender());
         System.out.println(playerOne.getNickName());

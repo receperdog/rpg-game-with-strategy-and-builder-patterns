@@ -5,6 +5,8 @@ package ArmorStrategies;
  * @since : 12-Dec-21, Sun
  **/
 public class Protector implements ArmorStrategies{
+    private int healthPoint = 800;
+
     @Override
     public String getArmor() {
         return "PROTECTOR";
@@ -12,6 +14,11 @@ public class Protector implements ArmorStrategies{
 
     @Override
     public int getHealthPoints() {
-        return 800;
+        return healthPoint;
+    }
+
+    @Override
+    public void setHealthPoints(int damage) {
+        healthPoint -= damage;
     }
 }

@@ -10,6 +10,7 @@ public class Character {
     private final String gender;
     private final String origin;
     private final String description;
+    private int healthPoint;
     private ArmorStrategies armorStrategies;
     private WeaponStrategies weaponStrategies;
 
@@ -36,11 +37,7 @@ public class Character {
         return origin;
     }
 
-    /*
-     public WeaponStrategies getWeaponStrategies() {
-        return weaponStrategies;
-    }
-    */
+
     public void setArmorStrategies(ArmorStrategies armorStrategies){
         this.armorStrategies = armorStrategies;
     }
@@ -50,7 +47,12 @@ public class Character {
     }
 
     public int getHealthPoint(){
+        healthPoint = armorStrategies.getHealthPoints();
         return armorStrategies.getHealthPoints();
+    }
+    public void setHealthPoint(int damage){
+        armorStrategies.setHealthPoints(damage);
+        healthPoint = armorStrategies.getHealthPoints();
     }
 
 
@@ -87,4 +89,9 @@ public class Character {
             return new Character(this);
         }
     }
+    /*
+     public WeaponStrategies getWeaponStrategies() {
+        return weaponStrategies;
+    }
+    */
 }
