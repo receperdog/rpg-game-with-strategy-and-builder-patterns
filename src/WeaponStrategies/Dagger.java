@@ -5,13 +5,16 @@ package WeaponStrategies;
  * @since : 09-Dec-21, Thu
  **/
 public class Dagger implements WeaponStrategies{
+    private int attackPower;
     @Override
     public String getWeapon() {
-        return "Dagger";
+        return "DAGGER";
     }
 
     @Override
     public int getAttackPower() {
-        return  80;
+        attackPower = 80;
+        return  attackPower;
     }
+
 }

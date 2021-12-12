@@ -5,13 +5,15 @@ package WeaponStrategies;
  * @since : 09-Dec-21, Thu
  **/
 public class Sword implements WeaponStrategies{
+    private int attackPower;
     @Override
     public String getWeapon() {
-        return "Sword";
+        return "SWORD";
     }
 
     @Override
     public int getAttackPower() {
-        return  90;
+        attackPower = 90;
+        return attackPower;
     }
 }

@@ -5,13 +5,15 @@ package WeaponStrategies;
  * @since : 09-Dec-21, Thu
  **/
 public class Axe implements WeaponStrategies{
+    private int attackPower;
     @Override
     public String getWeapon() {
-        return "Axe";
+        return "AXE";
     }
 
     @Override
     public int getAttackPower() {
-        return 95;
+        attackPower = 95;
+        return attackPower;
     }
 }
