@@ -5,24 +5,27 @@ import WeaponStrategies.Bow;
 public class Main {
 
     public static void main(String[] args) {
-        Character PlayerOne = new Character
-                .Builder("PlayerOne","Male","Turk").description("Player One").build();
+        Character playerOne = new Character
+                .Builder("playerOne","Male","Turk").description("Player One").build();
+
+        Character playerTwo = new Character.Builder("PlayerTwo", "Female", "USA").build();
+
 
         System.out.println("Weapon information");
-        PlayerOne.setWeaponStrategies(new Bow());
-        System.out.println(PlayerOne.getWeaponStrategies());
-        System.out.println(PlayerOne.getWeaponAttackPower());
+        playerOne.setWeaponStrategies(new Bow());
+        System.out.println(playerOne.getWeaponStrategies());
+        System.out.println(playerOne.getWeaponAttackPower());
 
         System.out.println("Armor information");
-        PlayerOne.setArmorStrategies(new Armor());
-        System.out.println(PlayerOne.getArmorStrategies());
-        System.out.println(PlayerOne.getHealthPoint());
+        playerOne.setArmorStrategies(new Armor());
+        System.out.println(playerOne.getArmorStrategies());
+        System.out.println(playerOne.getHealthPoint());
 
         System.out.println("Character information");
-        System.out.println(PlayerOne.getGender());
-        System.out.println(PlayerOne.getNickName());
-        System.out.println(PlayerOne.getOrigin());
-        System.out.println(PlayerOne.getDescription());
+        System.out.println(playerOne.getGender());
+        System.out.println(playerOne.getNickName());
+        System.out.println(playerOne.getOrigin());
+        System.out.println(playerOne.getDescription());
 
     }
 }
