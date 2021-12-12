@@ -10,6 +10,9 @@ public class Character {
     private final String gender;
     private final String origin;
     private final String description;
+    private final String eyeColor;
+    private final double height;
+    private final String skinColor;
     private int healthPoint;
     private ArmorStrategies armorStrategies;
     private WeaponStrategies weaponStrategies;
@@ -19,10 +22,17 @@ public class Character {
         this.gender = builder.gender;
         this.origin = builder.origin;
         this.description = builder.description;
+        this.eyeColor = builder.eyeColor;
+        this.height = builder.height;
+        this.skinColor = builder.skinColor;
     }
 
     public String getNickName() {
         return nickName;
+    }
+
+    public String getEyeColor() {
+        return eyeColor;
     }
 
     public String getDescription() {
@@ -37,7 +47,6 @@ public class Character {
         return origin;
     }
 
-
     public void setArmorStrategies(ArmorStrategies armorStrategies){
         this.armorStrategies = armorStrategies;
     }
@@ -50,11 +59,11 @@ public class Character {
         healthPoint = armorStrategies.getHealthPoints();
         return armorStrategies.getHealthPoints();
     }
+
     public void setHealthPoint(int damage){
         armorStrategies.setHealthPoints(damage);
         healthPoint = armorStrategies.getHealthPoints();
     }
-
 
     public void setWeaponStrategies(WeaponStrategies weaponStrategies) {
         this.weaponStrategies = weaponStrategies;
@@ -73,15 +82,33 @@ public class Character {
         private String gender;
         private String origin;
         private String description;
-
+        private String eyeColor;
+        private double height;
+        private String skinColor;
 
         public Builder(String nickName, String gender, String origin) {
             this.nickName = nickName;
             this.gender = gender;
             this.origin = origin;
         }
+
         public Builder description(String description){
             this.description = description;
+            return this;
+        }
+
+        public Builder eyeColor(String eyeColor){
+            this.eyeColor = eyeColor;
+            return this;
+        }
+
+        public Builder height(double height){
+            this.height = height;
+            return this;
+        }
+
+        public Builder skinColor(String skinColor){
+            this.skinColor = skinColor;
             return this;
         }
 
@@ -89,9 +116,4 @@ public class Character {
             return new Character(this);
         }
     }
-    /*
-     public WeaponStrategies getWeaponStrategies() {
-        return weaponStrategies;
-    }
-    */
 }
