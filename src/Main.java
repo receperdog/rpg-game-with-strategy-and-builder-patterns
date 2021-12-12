@@ -10,7 +10,6 @@ public class Main {
 
         Character playerTwo = new Character.Builder("PlayerTwo", "Female", "USA").build();
 
-
         System.out.println("Weapon information");
         playerOne.setWeaponStrategies(new Bow());
         System.out.println(playerOne.getWeaponStrategies());
