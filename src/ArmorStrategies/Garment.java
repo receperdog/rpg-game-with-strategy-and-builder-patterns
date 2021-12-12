@@ -18,7 +18,7 @@ public class Garment implements ArmorStrategies{
     }
 
     @Override
-    public void setHealthPoints(int damage) {
+    public void reduceHealthPoints(int damage) {
         healthPoint -= damage;
     }
 }

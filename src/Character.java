@@ -69,7 +69,7 @@ public class Character {
     }
 
     public void setHealthPoint(int damage){
-        armorStrategies.setHealthPoints(damage);
+        armorStrategies.reduceHealthPoints(damage);
         healthPoint = armorStrategies.getHealthPoints();
     }
 

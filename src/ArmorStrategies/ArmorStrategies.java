@@ -7,5 +7,5 @@ package ArmorStrategies;
 public interface ArmorStrategies {
     String getArmor();
     int getHealthPoints();
-    void setHealthPoints(int damage);
+    void reduceHealthPoints(int damage);
 }
