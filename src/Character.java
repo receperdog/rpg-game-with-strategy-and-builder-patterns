@@ -35,6 +35,14 @@ public class Character {
         return eyeColor;
     }
 
+    public double getHeight() {
+        return height;
+    }
+
+    public String getSkinColor() {
+        return skinColor;
+    }
+
     public String getDescription() {
         return description;
     }
