@@ -7,5 +7,4 @@ package WeaponStrategies;
 public interface WeaponStrategies {
     String getWeapon();
     int getAttackPower();
-
 }

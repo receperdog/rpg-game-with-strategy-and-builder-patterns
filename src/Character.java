@@ -11,8 +11,8 @@ public class Character {
     private final String origin;
     private final String description;
     private final String eyeColor;
-    private final double height;
     private final String skinColor;
+    private final double height;
     private int healthPoint;
     private ArmorStrategies armorStrategies;
     private WeaponStrategies weaponStrategies;
@@ -95,10 +95,17 @@ public class Character {
         private double height;
         private String skinColor;
 
-        public Builder(String nickName, String gender, String origin) {
+        public Builder(String nickName, String gender) {
             this.nickName = nickName;
             this.gender = gender;
+        }
+        public Character build(){
+            return new Character(this);
+        }
+
+        public Builder origin(String origin){
             this.origin = origin;
+            return this;
         }
 
         public Builder description(String description){
@@ -121,8 +128,5 @@ public class Character {
             return this;
         }
 
-        public Character build(){
-            return new Character(this);
-        }
     }
 }
